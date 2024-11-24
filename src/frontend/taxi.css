@@ -1,0 +1,264 @@
+body {
+    font-family:consolos;
+}
+
+/* navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #182258;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.navbar h4{
+    color: white;
+}
+.navbar a {
+    text-decoration: none;
+    color: #ffffff;
+    padding: 8px 15px;
+    border-radius: 4px;
+}
+.navbar a:hover {
+    background-color: #919ddf;
+}
+
+/* container-fluid */
+
+/* Images */
+.images{
+    width: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    
+}
+.images img{
+    height: 40vh;
+    width: 30%;
+    padding: 7px;
+    border-radius: 20px;
+}
+.images img:hover{
+    transform: scale(1.05); 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
+}
+
+.city p{
+    font-size: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #182258;
+}
+
+/* sections */
+section {
+    padding: 40px 20px;
+}
+
+#home p{
+    justify-content: center;
+    text-align: justify;
+}
+#home, #about {
+    padding: 40px 20px;
+}
+
+#home {
+    background-color: #ecdddd;
+    text-align: center;
+    margin: 20px;
+    line-height: 1.6; 
+}
+#home:hover{
+    box-shadow: 0 6px 12px rgb(255, 153, 153); 
+}
+#home h2 {
+    margin-bottom: 20px;
+}
+#home p{
+    text-align: justify;
+    text-transform: capitalize;
+}
+#places p {
+    font-size: 1.5em;
+    text-align: center;
+    margin-bottom: 20px;
+}
+#about{
+    background-color: #ecdddd;
+}
+#about:hover{
+    box-shadow: 0 6px 25px rgb(255, 153, 153);
+}
+#about h2{
+    text-align: center;
+}
+#about p{
+    text-align: justify;
+    text-transform: capitalize;
+}
+
+/* Form */
+#book-taxi {
+    background-color: #f9f9f9;
+}
+#book-taxi h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.form-container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 7px;
+    text-align: left;
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgb(131, 127, 127);
+}
+.form-container:hover{
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+.form-container label {
+    font-weight: bold;
+}
+.form-container .form-control {
+    margin-bottom: 15px;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 1%;
+    background: #182258;
+    color: white;
+}
+.footer div img{
+    display: inline-block;
+    padding: 7px;
+    margin-left: 2%;
+    border-radius: 50%;
+    border: 2px solid #ffffff;
+}
+
+.footer div img:hover{
+    background-color: antiquewhite;
+}
+
+/* Success Popup */
+.success-popup {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center content vertically */
+    top: 40%;
+    left: 50%;
+    width: 40%; /* Default width for larger screens */
+    height: auto; /* Adjust height based on content */
+    transform: translate(-50%, -50%);
+    background-color: #ffffff; /* White background */
+    border: 2px solid #4caf50; /* Green border */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px 30px; /* Spacing for content */
+    text-align: center; /* Center-align text */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Smooth shadow */
+    z-index: 1000; /* High z-index for visibility */
+}
+
+/* Success Icon */
+.success-icon {
+    width: 50px; /* Icon size */
+    height: 50px;
+    margin-right: 10px; /* Space between icon and text */
+}
+
+/* Success Message */
+.success-popup p {
+    margin: 0; /* Remove extra spacing */
+    color: #4caf50; /* Green color for text */
+    font-weight: bold; /* Bold text */
+    font-size: 18px; /* Slightly larger font size */
+    line-height: 1.5; /* Improved readability */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .success-popup {
+        width: 80%; /* Increase width for smaller screens */
+        height: auto; /* Let the content determine height */
+        padding: 15px 20px; /* Adjust padding */
+    }
+
+    .success-popup p {
+        font-size: 16px; /* Slightly smaller font size for mobile */
+    }
+}
+@media (max-width: 618px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .navbar a {
+        margin: 5px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .images img {
+        flex: 1 1 100%; /* For 1 image per row */
+    }
+    .success-popup {
+        width: 90%; /* Almost full width */
+        padding: 10px 15px; /* Further reduce padding */
+    }
+
+    .success-icon {
+        width: 40px; /* Smaller icon for mobile */
+        height: 40px;
+    }
+
+    .success-popup p {
+        font-size: 14px; /* Smaller text for mobile */
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #book-taxi {
+        margin: 10px;
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    .form-control {
+        font-size: 14px;
+    }
+
+    button {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    #book-taxi {
+        margin: 5px;
+        padding: 10px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    .form-control {
+        font-size: 13px;
+    }
+
+    button {
+        font-size: 14px;
+    }
+}
